@@ -1,0 +1,52 @@
+Relational Databases, which are similiar to spreadsheets
+
+Stuctureed Query Language (SQL)
+-----------------------------------
+Table = Collection of many rows
+Row = a single record in that Table
+Column = A value requires for each rows
+
+--------------------------------
+
+//CAPITAL LETTERS ARE SQL COMMANDS
+//SQL STATEMENTS ALWAYS START WITH A COMMAND AND END WITH A SEMI COLON
+
+Data Query Language (DQL) - Commands asking questions about the Data
+Data Manipulation Language (DML) - Commands for creating, updating and deleting Data
+Data Definition Language (DDL) - Commands for defining the database structure
+
+Sorting (ORDER BY)
+----------------------
+Descending Sort (DESC): Z/Y/X/W and 4/3/2/1
+Ascending sort (ASC) (default): A/B/C/D and 1/2/3/4
+
+Data Query Languge (DQL)
+----------------------------
+SELECT <columns> FROM <table> WHERE <column> = <value>;
+
+SELECT email
+FROM people 
+WHERE name = "Corbin King';
+
+Data Manipulation Language (DML)
+--------------------------------
+INSERT INTO <table> (<columns>) VALUES (<values>)
+
+INSERT INTO "Category" ("CategoryName", "Description")
+VALUES ('Frozen', 'Ready-to-eat meals');
+
+
+UPDATE <table> SET <column> = <value> WHERE <column> = <value>;
+
+UPDATE "Category"
+SET "Description" = 'Desserts and ready-to-eat meals'
+WHERE "Id" = 9;
+
+//You can revert changes if you write them first only in DB browser, so you need to be very careful to not delete things by accident. Get a database backup//
+
+DELETE FROM <Table> WHERE <Column> = <value>; //do not forget where statement or you will delete everything.
+
+DELETE FROM "Category"
+WHERE "Id" = 9;
+
+//double quotes for identifyers and single quotes for string values 
